@@ -4,5 +4,5 @@ min = second / 60
 sec = second % 60
 hour = min / 60
 min = min % 60
-print ("This is " + str(hour) + " hours " + str(min) + " mintes and "+ str(sec) + " seconds")
-
+print ("This is {} hours {} mintes and {} seconds".format(hour,min,sec))
+#print ("This is " + str(hour) + " hours " + str(min) + " mintes and "+ str(sec) + " seconds")
