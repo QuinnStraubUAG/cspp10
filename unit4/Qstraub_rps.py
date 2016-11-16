@@ -13,6 +13,7 @@ rounds_e = 0
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
     #code here
+    global play
     play = input("Put R,S,P (Must be in caps) ")
     
 
@@ -25,6 +26,7 @@ def get_p1_move():
 #   returns: the computer's randomly generated move
 def get_comp_move():
     #code here
+    global AI
     AI = int((random.randint(1,3)))
     if AI == 1:
         AI = "R"
@@ -43,10 +45,9 @@ def get_comp_move():
 #   returns: the user-chosen number of rounds
 def get_rounds():
     #code here
-    rounds = 0
+    global rounds_e
     rounds_e = int(input("How many rounds do you want to play? "))
-    while (rounds != rounds_e):
-        rounds = rounds + 1
+
 
 #function name: get_round_winner
 #   arguments: player move, computer move
@@ -87,6 +88,10 @@ def print_score():
 #   returns: none
 def rps():
     #code here
+    global wins
+    global loses
+    global ties
+    
     if play == "R" and AI == "S":
         print("A winner is you!!! ")
         wins = wins + 1
@@ -107,7 +112,7 @@ def rps():
         loses = loses + 1
     else:
         print("Tie")
-    ties = ties + 1
+        ties = ties + 1
 
 #function name: tests
 #   arguments: none
@@ -116,8 +121,11 @@ def rps():
 #   returns: none
 #   MINE def test():
     #code here
+def your_pick():
+    print("You picked {}:".format(play))
+    print("Computer picked {}: ".format(AI))
 
-#   MINE rps()
+
 
 
 
@@ -126,10 +134,13 @@ def rps():
 
 get_rounds()
 while (rounds != rounds_e):
+    print(AI)
     rounds = rounds + 1
     get_comp_move()
     get_p1_move()
     rps()
+    your_pick()
+    print_score()
 
 
 
