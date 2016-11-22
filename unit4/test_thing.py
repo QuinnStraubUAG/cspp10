@@ -5,7 +5,9 @@ loses = 0
 ties = 0 
 AI = 0
 play = 0
-rounds_e = 0
+p1_move = ""
+compu = ""
+rounds_XD = 0
 
 def get_p1_move():
   #  global play
@@ -30,47 +32,60 @@ def get_rounds():
     rounds_e = int(input("How many rounds do you want to play? "))
     return rounds_e
 
-def print_score():
-    print("Player Wins: {}".format(wins))
-    print("Computer Wins: {}".format(loses))
-    print("Ties: {}".format(ties))
+# def print_score():
+    # print("Player Wins: {}".format(wins))
+    # print("Computer Wins: {}".format(loses))
+    # print("Ties: {}".format(ties))
 
 def rps():
     # global wins
     # global loses
     # global ties
+    wins = 0
+    loses = 0
+    ties = 0
+    p1_move = get_p1_move()
+    compu = get_comp_move()
     
-    if get_p1_move() == "Rock" and get_comp_move() == "Scissors":
-        print("A winner is you!!! ")
+    if p1_move == "Rock" and compu == "Scissors":
+        #print("A winner is you!!! ")
         wins = wins + 1
-    elif get_p1_move() == "Scissors" and get_comp_move() == "Paper":
-        print("A winner is you!!! ")
+    elif p1_move == "Scissors" and compu == "Paper":
+        #print("A winner is you!!! ")
         wins = wins + 1
-    elif get_p1_move() == "Paper" and get_comp_move() == "Rock":
-        print("A winner is you!!! ")
+    elif p1_move == "Paper" and compu == "Rock":
+        #print("A winner is you!!! ")
         wins = wins + 1
-    elif get_comp_move() == "Paper" and get_p1_move() == "Rock":
-        print("A loser is you!!! ")
+    elif compu == "Paper" and p1_move == "Rock":
+        #print("A loser is you!!! ")
         loses = loses + 1
-    elif get_comp_move() == "Scissors" and get_p1_move() == "Paper":
-        print("A loser is you!!! ")
+    elif compu == "Scissors" and p1_move == "Paper":
+        #print("A loser is you!!! ")
         loses = loses + 1
-    elif get_comp_move() == "Rock" and get_p1_move() == "Scissors":
-        print("A loser is you!!! ")
+    elif compu == "Rock" and p1_move == "Scissors":
+        #print("A loser is you!!! ")
         loses = loses + 1
     else:
-        print("Tie")
+        #print("Tie")
         ties = ties + 1
+    if wins == 1:
+        return print  ("A winner is you!!!")
+    elif loses == 1:
+        return print  ("A loser is you!!!")
+    elif ties == 1:
+        return print  ("A tie has been meet ...")
+    else:
+        return print ("You broke it ... ")
 
-def your_pick():
-    print("You picked {}:".format(play))
-    print("Computer picked {}: ".format(AI))
+#def your_pick():
+    # print("You picked {}:".format(play))
+    # print("Computer picked {}: ".format(AI))
 
-get_rounds()
-while (rounds != get_rounds()):
+rounds_XD = get_rounds()
+while (rounds != rounds_XD):
     rounds = rounds + 1
     get_comp_move()
     get_p1_move()
     rps()
-    your_pick()
-    print_score()
+#    your_pick()
+#    print_score()
