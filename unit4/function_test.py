@@ -1,99 +1,63 @@
 import random
-rounds = 0
-AI = 0
-play = 0
-def get_rounds(play,AI):
-#    global rounds_e
-    rounds = int(input("How many rounds do you want to play? "))
-while (rounds != rounds):
-    rounds = rounds + 1
-def get_p1_move():
-#    global play
-    play = input("Put Rock, Scissors, Paper: ")
-    print (play)
+def bets ():
+    bets_v = input("Put in your bets: ")
+    #This is return the bet
+    return bets_v
+  
+  
+def begining_bank():
+    print("You have $100 so... Good luck")
+    return 100
     
-def your_pick():
-    print("You picked {}:".format(play))
-    print("Computer picked {}: ".format(AI))
+def dice_roll():
+    dice1 = random.randint(1,6)
+    dice2 = random.randint(1,6)
     
-def get_comp_move():
-#    global AI
-    AI = int((random.randint(1,3)))
-    if AI == 1:
-        AI = "Rock"
-    elif AI == 2:
-        AI = "Scissors"
-    elif AI == 3:
-        AI = "Paper"
-    else:
-        print("you broke it")
-        return AI
-def determine_winner():
-    ties = 0
-    wins = 0
-    loses = 0
-    if ((play == "Rock" and AI == "Scissors") and
-       (play == "Scissors" and AI == "Paper") and
-       (play == "Paper" and AI == "Rock")):
-        wins = wins + 1
-    elif ((AI == "Paper" and play == "Rock") and
-         (AI == "Scissors" and play == "Paper") and
-         (AI == "Rock" and play == "Scissors")):
-         loses = loses + 1
-    else:
-        print("Tie")
-        ties = ties + 1
-    if wins == 1:
-        print("A winner is you")
-    elif loses == 1:
-        print("A loser is you")
-    elif ties == 1:
-        print("a tie is met")
+    dice_sum = dice1 + dice2
+    
+    print("you rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
+    return dice_sum
 
-def print_score():
-    ties = 0
-    wins = 0
-    loses = 0
-    print("Player Wins: {}".format(wins))
-    print("Computer Wins: {}".format(loses))
-    print("Ties: {}".format(ties))
-def get_round_winner():
-    if winner == "play":
-        print ("play won")
-    elif winner == "AI":
-        print ("AI won")
+def game_thing_first(dice_roll):
+    roll = dice_roll()
+    if (roll == 2 or roll == 3 or roll == 12):
+        return ("lose")
+    elif (roll == 7 or roll == 11):
+        return ("win")
     else:
-        print ("tie")
+        return ("point") 
+# print
+# return
+
+def game_thing_point(dice_roll, game_thing_first):
+    new_roll = 0
+    point_roll = dice_roll()
+    verify = game_thing_first(dice_roll)
     
-def rps():
-    winner = 0
-    ties = 0
-    wins = 0
-    loses = 0
-    if ((play == "Rock" and AI == "Scissors") and
-       (play == "Scissors" and AI == "Paper") and
-       (play == "Paper" and AI == "Rock")):
-        wins = wins + 1
-    elif ((AI == "Paper" and play == "Rock") and
-         (AI == "Scissors" and play == "Paper") and
-         (AI == "Rock" and play == "Scissors")):
-         loses = loses + 1
-    else:
-        print("Tie")
-        ties = ties + 1
-    if wins == 1:
-        print("A winner is you")
-    elif loses == 1:
-        print("A loser is you")
-    elif ties == 1:
-        print("a tie is met")   
-     
-    rounds = get_rounds()
-    play = get_p1_move()
-    AI = get_comp_move()
-    play = determine_winner()
-    winner = get_rounds(play,AI)
-    # your_pick()
-    # print_score()
+    while verify == "point" and (point_roll != new_roll or new_roll != 7):
+        print ("hi")
+        
+        
+        
+        
+        
     
-rps()
+game_thing_point(dice_roll, game_thing_first)    
+    
+    
+ # æææææææ
+  
+
+  
+#   If the player rolls a 2, 3, or 12 in this phase, they lose their bet, and the round ends.
+# If the player rolls a 7 or 11 in this phase, they win their bet, and the round ends.
+# If the player rolls any other number (a 4,5,6,8,9,10), then they continue to Phase 3, with their roll becoming their “point number“
+  
+  
+  
+    
+# def funk_test (begining_bank):
+#     test = begining_bank()
+#     return (test)
+    
+# funk_test(begining_bank)
