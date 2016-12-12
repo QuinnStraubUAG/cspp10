@@ -33,19 +33,35 @@ def game_thing_point(dice_roll, game_thing_first):
     new_roll = 0
     point_roll = dice_roll()
     verify = game_thing_first(dice_roll)
-    
-    while verify = "point" and (point_roll != new_roll or new_roll != 7:)
+    while (verify == "point") and (point_roll != new_roll or new_roll != 7):
         dice_roll()
+        new_roll = dice_roll
+        print ("Your roll was {} it rolled {} ".format(point_roll,new_roll))
+        
+        #This doesn't work yet ... 
         
         
         
-        
+# def craps():
+#     begining_bank()
+#     bets ()
+#     dice_roll()
+#     game_thing_first(dice_roll)
+#     game_thing_point(dice_roll, game_thing_first)
+
+def craps():
+    print("You are going to strat with {} dollors".format(begining_bank)
+    
+    
+
+    
+    
         
     
      
     
     
- # æææææææ
+ # æææææææ ignorge 
   
 
   
