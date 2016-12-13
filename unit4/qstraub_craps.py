@@ -18,7 +18,7 @@ def dice_roll():
     print("you rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
     return dice_sum
 
-def game_thing_first(dice_roll):
+def game_thing_first():
     roll = dice_roll()
     if (roll == 2 or roll == 3 or roll == 12):
         return ("lose")
@@ -29,10 +29,10 @@ def game_thing_first(dice_roll):
 # print
 # return
 
-def game_thing_point(dice_roll, game_thing_first):
+def game_thing_point():
     new_roll = 0
     point_roll = dice_roll()
-    verify = game_thing_first(dice_roll)
+    verify = game_thing_first()
     while (verify == "point") and (point_roll != new_roll or new_roll != 7):
         dice_roll()
         new_roll = dice_roll
@@ -50,10 +50,19 @@ def game_thing_point(dice_roll, game_thing_first):
 #     game_thing_point(dice_roll, game_thing_first)
 
 def craps():
-    print("You are going to strat with {} dollors".format(begining_bank)
+    # b_bank = begining_bank()
+    # print("You are going to strat with {} dollors".format(b_bank))
+    # beats = bets()
+    # print (beats)
+    roll = dice_roll()
+    first_game = game_thing_first()
     
     
-
+    
+craps()
+    
+    
+#work in progess
     
     
         
