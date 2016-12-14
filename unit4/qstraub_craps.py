@@ -15,28 +15,31 @@ def dice_roll():
     
     dice_sum = dice1 + dice2
     
-    print("you rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
+    print("You rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
     return dice_sum
 
-def game_thing_first():
+def game_thing():
     roll = dice_roll()
     if (roll == 2 or roll == 3 or roll == 12):
-        return ("lose")
+        print("You lost")
+        check = 0 #lose
     elif (roll == 7 or roll == 11):
-        return ("win")
+        print("You Win")
+        check = 1 #win
     else:
-        return ("point") 
-# print
-# return
-
-def game_thing_point():
+        check = 2 #point
     new_roll = 0
-    point_roll = dice_roll()
-    verify = game_thing_first()
-    while (verify == "point") and (point_roll != new_roll or new_roll != 7):
-        dice_roll()
-        new_roll = dice_roll
+    point_roll = roll
+    while (check == 2) and (point_roll != new_roll or new_roll != 7):
+        new_roll = dice_roll()
         print ("Your roll was {} it rolled {} ".format(point_roll,new_roll))
+        if point_roll == new_roll:
+            print("You win your first and Second number matchs")
+        elif new_roll == 7:
+            print ("You lost you rolled 7")
+        else:
+            print("It's a draw let's keep going ontil you ether win or lose")
+        
         
         #This doesn't work yet ... 
         
@@ -54,8 +57,7 @@ def craps():
     # print("You are going to strat with {} dollors".format(b_bank))
     # beats = bets()
     # print (beats)
-    roll = dice_roll()
-    first_game = game_thing_first()
+   game = game_thing()
     
     
     
