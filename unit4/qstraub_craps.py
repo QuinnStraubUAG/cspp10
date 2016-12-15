@@ -1,18 +1,21 @@
 import random
+
+def begining_bank():
+    print("You have $100 so... Good luck")
+    return 100 
 def bets ():
     bets_v = input("Put in your bets: ")
     #This is return the bet
-    return bets_v
-  
-  
-def begining_bank():
-    print("You have $100 so... Good luck")
-    return 100
+    return bets_v  
+    
+def bets_Start():
+    B_bank = begining_bank()
+    money_gone = bets()
     
 def dice_roll():
     dice1 = random.randint(1,6)
     dice2 = random.randint(1,6)
-    
+
     dice_sum = dice1 + dice2
     
     print("You rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
@@ -28,9 +31,10 @@ def game_thing():
         check = 1 #win
     else:
         check = 2 #point
+        print("You didn't land the things ... POINT ROUND")
     new_roll = 0
     point_roll = roll
-    while (check == 2) and (point_roll != new_roll or new_roll != 7):
+    while (check == 2) and (point_roll != new_roll and new_roll != 7):
         new_roll = dice_roll()
         print ("Your roll was {} it rolled {} ".format(point_roll,new_roll))
         if point_roll == new_roll:
@@ -39,25 +43,20 @@ def game_thing():
             print ("You lost you rolled 7")
         else:
             print("It's a draw let's keep going ontil you ether win or lose")
+            input("Press Enter to continue...")
         
         
         #This doesn't work yet ... 
         
         
         
-# def craps():
-#     begining_bank()
-#     bets ()
-#     dice_roll()
-#     game_thing_first(dice_roll)
-#     game_thing_point(dice_roll, game_thing_first)
 
 def craps():
-    # b_bank = begining_bank()
-    # print("You are going to strat with {} dollors".format(b_bank))
-    # beats = bets()
-    # print (beats)
-   game = game_thing()
+    continu = 1
+    while continu = 1:
+        game = game_thing()
+    contin = input("Do you want to continue [Y|N] ")
+        
     
     
     
