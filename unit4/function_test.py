@@ -1,21 +1,30 @@
-def game_thing():
-    roll = 7
-    if (roll == 2 or roll == 3 or roll == 12):
-        print("You lost")
-        check = 0 #lose
-    elif (roll == 7 or roll == 11):
-        print("You Win")
-        check = 1 #win
-    else:
-        check = 2 #point
+def begining_bank():
+    print("You have $100 so... Good luck")
+    return 100 
+
+
+
+
+
+
+
+def bets ():
+    bets_v = input("Put in your bets: ")
+    #This is return the bet
+    return bets_v  
+
+
+
+
+
+
+
+def bets_cal():
+    bank_b = begining_bank()
+    money = bets()
+    while (money != int) or (money > bank_b) or (money < 1):
+        print("It has to be a whole number, not a negtive, and you need to have enogh money")
+        money = bets()
         
-    if check == 1:
-        print("Yes")
-    else:
-        print("no")
-
-
-game_thing()
-# check = 0 = lose
-# check = 1 = win
-# check = 2 = point
+        
+bets_cal()

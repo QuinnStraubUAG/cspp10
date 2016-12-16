@@ -8,9 +8,9 @@ def bets ():
     #This is return the bet
     return bets_v  
     
-def bets_Start():
-    B_bank = begining_bank()
-    money_gone = bets()
+# def bets_Start():
+#     B_bank = begining_bank()
+#     money_gone = bets()
     
 def dice_roll():
     dice1 = random.randint(1,6)
@@ -20,8 +20,14 @@ def dice_roll():
     
     print("You rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
     return dice_sum
+# def bets_cal():
+#     money = bets()
+#     while (money != int) or (money > money) or (money < 1):
+#         money = bets()
+    
 
 def game_thing():
+    b_bank = begining_bank()
     roll = dice_roll()
     if (roll == 2 or roll == 3 or roll == 12):
         print("You lost")
@@ -52,11 +58,8 @@ def game_thing():
         
 
 def craps():
-    continu = 1
-    while continu = 1:
-        game = game_thing()
-    contin = input("Do you want to continue [Y|N] ")
-        
+    game = game_thing()
+   
     
     
     
