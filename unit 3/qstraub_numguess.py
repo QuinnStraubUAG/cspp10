@@ -12,7 +12,7 @@ while (numb != randint):
     elif numb == randint:
         print ("you guessed the number! It took you {} tries".format(x))
     elif numb == ("deez nuts"):
-        print ("You found it ")
+        print ("You found it, meme lord is pleaseed ")
     else:
         ("You did your life wrong ")
     
