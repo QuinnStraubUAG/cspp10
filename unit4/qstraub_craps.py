@@ -4,7 +4,7 @@ def begining_bank():
     print("You have $100 so... Good luck")
     return 100 
 def bets ():
-    bets_v = input("Put in your bets: ")
+    bets_v = int(input("Put in your bets: "))
     #This is return the bet
     return bets_v  
     
@@ -20,10 +20,19 @@ def dice_roll():
     
     print("You rolled {} {} so you got {}".format(dice1,dice2,dice_sum))
     return dice_sum
-# def bets_cal():
-#     money = bets()
-#     while (money != int) or (money > money) or (money < 1):
-#         money = bets()
+
+def bets_cal():
+    bank_b = begining_bank()
+    money = bets()
+    while ((money != int(money)) or (money > bank_b) or (money < 1)):
+        print("It has to be a whole number, not a negtive, and you need to have enogh money")
+        money = bets()
+        return ("True")
+        
+        
+        
+        
+
     
 
 def game_thing():
