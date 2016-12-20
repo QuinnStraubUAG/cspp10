@@ -27,22 +27,23 @@ def bets_cal():
     while ((money != int(money)) or (money > bank_b) or (money < 1)):
         print("It has to be a whole number, not a negtive, and you need to have enogh money")
         money = bets()
-        return ("True")
+        return money
         
         
         
-        
-
-    
 
 def game_thing():
-    b_bank = begining_bank()
     roll = dice_roll()
+    fails = 0
+    y_n = 0
+    re = 0
     if (roll == 2 or roll == 3 or roll == 12):
         print("You lost")
+        re = 1
         check = 0 #lose
     elif (roll == 7 or roll == 11):
         print("You Win")
+        re = 1
         check = 1 #win
     else:
         check = 2 #point
@@ -54,19 +55,82 @@ def game_thing():
         print ("Your roll was {} it rolled {} ".format(point_roll,new_roll))
         if point_roll == new_roll:
             print("You win your first and Second number matchs")
+            re = 1
         elif new_roll == 7:
             print ("You lost you rolled 7")
+            re = 1
         else:
             print("It's a draw let's keep going ontil you ether win or lose")
             input("Press Enter to continue...")
+            
+        if re == 1:
+            y_n = input("Do you want to continue [y|n] (No caps plz): ")
+        else:
+            fails = fails + 1
+            
+        if y_n == "y":
+            #Run new func
+        elif y_n == "n":
+            print("Ok thx for playing")
+        else:
+            print ("You messed up so now you don't get to go again")
+            
+            
+
+#  def game_thing_y():
+#     roll = dice_roll()
+#     fails = 0
+#     y_n = 0
+#     re = 0
+#     if (roll == 2 or roll == 3 or roll == 12):
+#         print("You lost")
+#         re = 1
+#         check = 0 #lose
+#     elif (roll == 7 or roll == 11):
+#         print("You Win")
+#         re = 1
+#         check = 1 #win
+#     else:
+#         check = 2 #point
+#         print("You didn't land the things ... POINT ROUND")
+#     new_roll = 0
+#     point_roll = roll
+#     while (check == 2) and (point_roll != new_roll and new_roll != 7):
+#         new_roll = dice_roll()
+#         print ("Your roll was {} it rolled {} ".format(point_roll,new_roll))
+#         if point_roll == new_roll:
+#             print("You win your first and Second number matchs")
+#             re = 1
+#         elif new_roll == 7:
+#             print ("You lost you rolled 7")
+#             re = 1
+#         else:
+#             print("It's a draw let's keep going ontil you ether win or lose")
+#             input("Press Enter to continue...")
+            
+#         if re == 1:
+#             y_n = input("Do you want to continue [y|n] (No caps plz): ")
+#         else:
+#             fails = fails + 1
+            
+#         if y_n == "y":
+#             #Run new func
+#         elif y_n == "n":
+#             print("Ok thx for playing")
+#         else:
+#             print ("You messed up so now you don't get to go again")
+            
+                       
         
         
-        #This doesn't work yet ... 
+        
+
         
         
         
 
 def craps():
+    bet_test = bets_cal()
     game = game_thing()
    
     

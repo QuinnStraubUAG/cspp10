@@ -25,6 +25,7 @@ def bets_cal():
     while ((money != int(money)) or (money > bank_b) or (money < 1)):
         print("It has to be a whole number, not a negtive, and you need to have enogh money")
         money = bets()
+        return ("True")
         
         
         

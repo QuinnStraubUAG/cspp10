@@ -57,7 +57,7 @@ def rps():
     pscore = 0
     cscore = 0
     ties = 0
-    for x in range(rounds):
+    for x in range(rounds):..............
         print ("Round {}!".format(x + 1))
         player = get_p1_move()
         comp = get_comp_move()
