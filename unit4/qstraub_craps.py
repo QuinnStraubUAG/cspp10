@@ -1,7 +1,6 @@
 import random
 
 def begining_bank():
-    print("You have $100 so... Good luck")
     return 100 
 def bets ():
     bets_v = int(input("Put in your bets: "))
@@ -66,7 +65,7 @@ def game_thing():
             print("It's a draw let's keep going ontil you ether win or lose")
             input("Press Enter to continue...")
             
-        if re == 1 or re == 2
+        if re == 1 or re == 2:
             y_n = input("Do you want to continue [y|n] (No caps plz): ")
             #Run bets code
         else:
@@ -85,15 +84,24 @@ def game_thing():
     
             
 def money_system():
-    money_inserted = bets_cal()
     bank_b = begining_bank()
+    bank_b = int(bank_b)
     bank = bank_b
+    bank = int(bank)
+    money_inserted = bets_cal()
+    print ("Your starting with $100 so good luck ... ")
+    money_inserted = int(money_inserted)
     win_lose = game_thing()
+    bank = bank - money_inserted
+    
     if win_lose == 1:
-        money_inserted * 2 = bank
+        bank = money_inserted * 2 + bank
+        print(bank)
     elif win_lose == 2:
         bank = bank - money_inserted
-        
+        print (bank)
+    else:
+        print("You did it wrong")
         
 
 #  def game_thing_y():
@@ -139,46 +147,12 @@ def money_system():
 #         else:
 #             print ("You messed up so now you don't get to go again")
             
-                       
-        
-        
-        
-
-        
-        
-        
 
 def craps():
-    bet_test = bets_cal()
-    game = game_thing()
+    # bet_test = bets_cal()
+    game = money_system()
    
-    
-    
-    
 craps()
-    
-    
-#work in progess
-    
-    
-        
-    
-     
-    
-    
- # æææææææ ignorge 
-  
 
-  
-#   If the player rolls a 2, 3, or 12 in this phase, they lose their bet, and the round ends.
-# If the player rolls a 7 or 11 in this phase, they win their bet, and the round ends.
-# If the player rolls any other number (a 4,5,6,8,9,10), then they continue to Phase 3, with their roll becoming their “point number“
-  
-  
-  
-    
-# def funk_test (begining_bank):
-#     test = begining_bank()
-#     return (test)
-    
-# funk_test(begining_bank)
+#work in progess
+ # æææææææ ignorge 
