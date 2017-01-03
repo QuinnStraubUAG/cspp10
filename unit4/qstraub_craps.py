@@ -1,5 +1,5 @@
 import random
-import sys
+
 
 def begining_bank():
     # This is the amount of money you start with
@@ -119,7 +119,7 @@ def craps():
     contin = contiune()
     while contin == "y":
         if bank == 0:
-            sys.exit()
+            break
         money_inserted = bets()
         money_inserted = int(money_inserted)
         while ((money_inserted > bank) or (money_inserted < 1)):
