@@ -1,3 +1,4 @@
+#me and nickolus did this together
 list_of_num = []
 user = 6
 while user != "exit":
