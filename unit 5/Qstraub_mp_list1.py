@@ -1,3 +1,4 @@
+#Nickolas and quinn did this
 list = []
 user = 2
 while user != 0:

@@ -1,12 +1,10 @@
-# a = [1,2,3]
-# b = a
-# b.append(5,6,7)
-# print (b)
+#Me and Nickulus did this
 
-
-def origanal(extension):
-    extension.append([5,6,7])
-
-a_list = [1,2,3]
-origanal(a_list)
-print(a_list)
+def extend(original,b_list):
+    for c in b_list:
+        original.append(c)
+   
+original = [1,2,3]
+b_list = [4,5,6]
+extend(original,b_list)
+print (original)
