@@ -33,3 +33,21 @@
 # to_replace = 1
 # replace_with = 99 ]
 
+# # import MP_5 from mp_remove_all.py
+# def swap(original, index1, index2):
+#     fails = 0
+#     for x in range(len(original)):
+#         if original[x] == index1:
+#             original[x] = index2
+#         elif original[x] == index2:
+#             original[x] = index1
+#         else: fails = fails + 1
+        
+    
+
+#     print (original)
+    
+    
+# values = [1,2,3,4,5,4,3,2,1]
+# swap(values,2,3)
+# print (values)
