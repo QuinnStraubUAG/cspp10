@@ -66,6 +66,7 @@ while opponent != 0 and opponent != 2:
         break
     else:
         fails = fails + 1
+        damage = 0
     o_attack = int((random.randint(1,4)))
     if o_attack == 1:
         print ("Eevee used Swift it did 35 damage")
@@ -113,3 +114,6 @@ while opponent != 0 and opponent != 2:
         opponent = 0
     else:
         fails = fails + 1
+        
+    #     print("Ok this is how you play you each have a certain amount of helth and 4 different attacks which do different things")
+    # print ("so ether selet an attack or type the number for the attack and i right after (lower case no space) to get the info")

@@ -2,7 +2,7 @@ import random
 word = "hello"
 word_works = 0
 def scramble_word(word):
-    list = []
+    list_1 = []
     # letter_check = word[1]
     # letter_check_2 = word[-2]
     # print (word[1:-1])
@@ -14,17 +14,21 @@ def scramble_word(word):
         print("Stop_3")
     else:
         word_works = 1
-        print (list)
     
     if word_works == 1:
         middle_letters = word[1:-1]
-        list(middle_letters)
-        # list_1 = list_1[middle_letters]
-        print (list)
-        random.shuffle(list)
-        print (list)
+        print (middle_letters)
+        list_1 = list(middle_letters)
+        print (list_1)
+        random.shuffle(list_1)
+        print (list_1)
     else:
         print ("NO")
+    final = '+'.join(list_1)
+    print (final)
+    
+    final.index(+[, 1[, 3]])
+    
 
 scramble_word(word)
 #I would first get a word
