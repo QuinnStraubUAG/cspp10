@@ -4,15 +4,17 @@ opponent = 1
 opponent_hp = 200
 player_hp = 150
 p_damage = 0
-teacher = input("Do you want a tutorial [Y or N](make sure it is in CAPS): ")
-if teacher == "Y":
-    # print("I will type a thing later")
-    print("Ok this is how you play you each have a certain amount of helth and 4 different attacks which do different things")
-    print ("so ether selet an attack or type the number for the attack and i right after (lower case no space) to get the info on the attack")
-else:
-    print("Ok lets start")
-print("A wild eevee has appered")
-print ("Go Persian(Alolan)")
+def start():
+    teacher = input("Do you want a tutorial [Y or N](make sure it is in CAPS): ")
+    if teacher == "Y":
+        # print("I will type a thing later")
+        print("Ok this is how you play you each have a certain amount of helth and 4 different attacks which do different things")
+        print ("so ether selet an attack or type the number for the attack and i right after (lower case no space) to get the info on the attack")
+    else:
+        print("Ok lets start")
+    print("A wild eevee has appered")
+    print ("Go Persian(Alolan)")
+start()
 while opponent != 0 and opponent != 2:
     print("Eevee has {} Health".format(opponent_hp))
     print("You have {} Health".format(player_hp))
@@ -107,12 +109,13 @@ while opponent != 0 and opponent != 2:
     else:
         fails = fails + 1
         damage = 0
-    o_attack = int((random.randint(1,4)))
+    o_attack = 1
     if o_attack == 1:
         print ("Eevee used Swift it did 35 damage")
         # Swift
         #Never misses
         p_damage = 35
+        player_hp = player_hp - p_damage
     elif o_attack == 2 and miss_chance_o != 100:
         print ("Eevee used Bite it did 30 damage")
         #bite

@@ -3,9 +3,8 @@ word = "hello"
 word_works = 0
 def scramble_word(word):
     list_1 = []
-    # letter_check = word[1]
-    # letter_check_2 = word[-2]
-    # print (word[1:-1])
+    letter_check = word[0]
+    letter_check_2 = word[-1]
     if len(word) == (1):
         print ("Stop_1")
     elif len(word) == (2):
@@ -24,10 +23,11 @@ def scramble_word(word):
         print (list_1)
     else:
         print ("NO")
-    final = '+'.join(list_1)
+    final = ''.join(list_1)
     print (final)
+    print (letter_check + final + letter_check_2)
     
-    final.index(+[, 1[, 3]])
+    
     
 
 scramble_word(word)
