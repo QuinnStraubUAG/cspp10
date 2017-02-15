@@ -109,7 +109,7 @@ while opponent != 0 and opponent != 2:
     else:
         fails = fails + 1
         damage = 0
-    o_attack = 1
+    o_attack = 1 
     if o_attack == 1:
         print ("Eevee used Swift it did 35 damage")
         # Swift
