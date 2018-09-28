@@ -8,6 +8,7 @@ while user != "exit":
         list_of_num = []
     elif user == "print" or user == "Print":
         print (list_of_num)
+        print (list_of_num[2])
     elif user == "length" or user == "Length":
         print (len(list_of_num))
     elif user == "exit" or user == "Exit":
